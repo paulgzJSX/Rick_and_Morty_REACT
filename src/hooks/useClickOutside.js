@@ -1,6 +1,6 @@
-import { useEffect, useCallback } from 'react'
+import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
-import { hideBackdrop } from '../store/actions/actions'
+import { hideBackdrop } from '../store/actions/actionCreators'
 
 export const useClickOutside = ref => {
     const dispatch = useDispatch()
@@ -8,11 +8,11 @@ export const useClickOutside = ref => {
     useEffect(() => {
         document.addEventListener('mousedown', handleClickOutside)
         return () => document.removeEventListener('mousedown', handleClickOutside)
-    }, [])
+    })
 
-    const handleClickOutside = useCallback(e => {
+    const handleClickOutside = e => {
         if (ref.current && !ref.current.contains(e.target)) {
             dispatch(hideBackdrop())
         }
-    }, [])
+    }
 }

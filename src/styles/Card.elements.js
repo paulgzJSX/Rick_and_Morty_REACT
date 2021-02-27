@@ -11,13 +11,13 @@ const Backface = css`
 
 const tremble = keyframes`
     0% {
-        transform: translateX(-5%);
+        transform: translateX(-3%);
     }
     50% {
-        transform: translateX(5%);
+        transform: translateX(3%);
     }
     100% {
-        transform: translateX(-5%);
+        transform: translateX(-3%);
     }
 `
 
@@ -35,7 +35,7 @@ export const Cards = styled.section`
     }
 `
 
-export const CardWrapper = styled.div`
+export const Wrapper = styled.div`
     cursor: pointer;
     background-color: transparent;
     height: 300px;
@@ -59,7 +59,7 @@ export const CardWrapper = styled.div`
         }
 `
 
-export const CardInner = styled.div`
+export const Inner = styled.div`
     position: relative;
     width: 100%;
     height: 100%;
@@ -68,7 +68,7 @@ export const CardInner = styled.div`
     transform: ${props => props.rotate && 'rotateY(180deg)'}; 
 `
 
-export const CardFront = styled.div`
+export const Front = styled.div`
     position: relative;
     ${Backface}
 `
@@ -86,29 +86,32 @@ export const CharacterStatus = styled.div`
     padding: .5rem;  
 `
 
-export const CardBack = styled.div`
-    position: relative;
+export const Back = styled.div`
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: #333;
     color: white;
     padding: 20px;
     transform: rotateY(180deg);  
     ${Backface} 
-    
+
     li {
         list-style: none;
         padding-bottom: 10px;        
     }
+
 `
 
-export const CardButtons = styled.div`
-    position: absolute;
-    bottom: 1rem;
-    left: 0;
+export const Content = styled.div`
+`
+
+export const Buttons = styled.div`
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 2rem;
 
     button {
         width: 5rem;
@@ -131,5 +134,5 @@ export const CardButtons = styled.div`
 `
 
 export const AliveIcon = styled(GoPrimitiveDot)`
-    color: ${props => props.alive ? 'green' : 'red'}
+    color: ${props => props.alive ? 'green' : 'red'};
 `

@@ -1,7 +1,10 @@
 import { useEffect, useCallback } from 'react'
-import { moveToNextPage } from '../store/actions/actions'
+import { useDispatch } from 'react-redux'
+import { moveToNextPage } from '../store/actions/actionCreators'
 
-export const useInfiniteScroll = (scrollRef, dispatch) => {
+export const useInfiniteScroll = (scrollRef) => {
+    const dispatch = useDispatch()
+
     const scrollObserver = useCallback(
         node => {
             new IntersectionObserver(entries => {

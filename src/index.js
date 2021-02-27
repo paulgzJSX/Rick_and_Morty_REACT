@@ -1,15 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
 import { Provider } from 'react-redux'
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 import { charactersReducer } from './store/reducers/characterReducer'
 import { pageReducer } from './store/reducers/pageReducer'
 import { errorReducer } from './store/reducers/errorReducer'
 import { backdropReducer } from './store/reducers/backdropReducer'
-import './index.css';
-import App from './App';
+import { loaderReducer } from './store/reducers/loaderReducer'
 import createSagaMiddleware from 'redux-saga'
-import { fetchCharactersWatcher } from './store/sagas/saga';
+import { fetchCharactersWatcher } from './store/sagas/saga'
+import './index.css'
 
 const sagaMiddleWare = createSagaMiddleware()
 
@@ -17,7 +18,8 @@ const rootReducer = combineReducers({
   charactersReducer,
   pageReducer,
   errorReducer,
-  backdropReducer
+  backdropReducer,
+  loaderReducer
 })
 
 const store = createStore(rootReducer, applyMiddleware(sagaMiddleWare))
@@ -25,11 +27,9 @@ const store = createStore(rootReducer, applyMiddleware(sagaMiddleWare))
 sagaMiddleWare.run(fetchCharactersWatcher)
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </React.StrictMode>,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById('root')
-);
+)
 

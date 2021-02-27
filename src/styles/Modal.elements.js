@@ -36,7 +36,7 @@ const moveOut = keyframes`
     }
 `
 
-export const CharacterWrapper = styled.div`
+export const Wrapper = styled.div`
     height: 15rem;
     width: 45rem;
     border-radius: 20px;
@@ -47,7 +47,7 @@ export const CharacterWrapper = styled.div`
     overflow: hidden;
 `
 
-export const ImageWrapper = styled.div`
+export const Image = styled.div`
     flex: 40%;
     height: 100%;
     width: 30%;
@@ -72,7 +72,7 @@ export const ImageWrapper = styled.div`
     }
 `
 
-export const CharacterContent = styled.div`
+export const Content = styled.div`
     flex: 60%;
     padding: 2rem;
     color: #000;
