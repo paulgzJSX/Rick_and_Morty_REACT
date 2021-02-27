@@ -4,10 +4,20 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { CardsGrid, Header, CharacterPage, Backdrop } from './components/index'
 import { getCharacters } from './store/actions/actionCreators'
 import { GlobalStyles } from './styles/GlobalStyles'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 function App() {
   const dispatch = useDispatch()
   const { page } = useSelector(state => state.pageReducer)
+
+  useEffect(() => {
+    AOS.init({
+      easing: 'ease',
+      duration: 1000
+    })
+    AOS.refresh()
+  }, [])
 
   useEffect(() => {
     dispatch(getCharacters())

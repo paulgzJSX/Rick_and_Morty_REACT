@@ -1,11 +1,10 @@
 import styled from 'styled-components'
+import { flexCenter } from './GlobalStyles'
 
 export const HeaderContainer = styled.header`
     height: 150px;
     perspective: 100px;  
-    display: flex;
-    align-items: center;
-    justify-content: center;  
+    ${flexCenter}
 
     h1 {
         font-size: clamp(1rem, 5vw, 2.5rem);

@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import { css } from 'styled-components'
 
 export const GlobalStyles = createGlobalStyle`
     * {
@@ -23,4 +24,21 @@ export const GlobalStyles = createGlobalStyle`
         margin: auto;
         padding: 0 20px;        
     }
+`
+
+export const flexCenter = css`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`
+
+export const flexSpaceBetween = css`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+`
+
+export const widthHeight100 = css`
+    width: 100%;
+    height: 100%;
 `

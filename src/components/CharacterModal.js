@@ -8,7 +8,7 @@ const CharacterModal = ({ character }) => {
     useClickOutside(characterWrapperRef)
 
     return (
-        <Modal.Wrapper ref={characterWrapperRef}>
+        <Modal.Wrapper ref={characterWrapperRef} data-aos='zoom-in'>
             <Modal.Image>
                 <img src={character.image} alt={character.name} />
             </Modal.Image>

@@ -1,10 +1,10 @@
 import styled, { css, keyframes } from 'styled-components'
+import { flexSpaceBetween, widthHeight100 } from './GlobalStyles'
 import { GoPrimitiveDot } from 'react-icons/go'
 
 const Backface = css`
     position: absolute;
-    width: 100%;
-    height: 100%;
+    ${widthHeight100};
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;    
 `
@@ -49,8 +49,7 @@ export const Wrapper = styled.div`
     }
 
     img {
-        width: 100%;
-        height: 100%;
+        ${widthHeight100};
         object-fit: cover;   
     }
 
@@ -61,8 +60,7 @@ export const Wrapper = styled.div`
 
 export const Inner = styled.div`
     position: relative;
-    width: 100%;
-    height: 100%;
+    ${widthHeight100};
     transition: transform 0.8s;
     transform-style: preserve-3d;   
     transform: ${props => props.rotate && 'rotateY(180deg)'}; 
@@ -75,9 +73,7 @@ export const Front = styled.div`
 
 export const CharacterStatus = styled.div`
     position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    ${flexSpaceBetween};
     bottom: 5px;
     background-color: rgba(0,0,0,.4);
     width: 100%;
@@ -87,10 +83,8 @@ export const CharacterStatus = styled.div`
 `
 
 export const Back = styled.div`
-    display: flex;
-    align-items: center;
+    ${flexSpaceBetween};
     flex-direction: column;
-    justify-content: space-between;
     background-color: #333;
     color: white;
     padding: 20px;
@@ -109,9 +103,7 @@ export const Content = styled.div`
 
 export const Buttons = styled.div`
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    ${flexSpaceBetween};
 
     button {
         width: 5rem;

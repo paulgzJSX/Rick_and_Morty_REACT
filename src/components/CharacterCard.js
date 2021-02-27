@@ -11,7 +11,7 @@ const CharacterCard = ({ character }) => {
     const dispatch = useDispatch()
 
     return (
-        <Card.Wrapper onMouseOver={() => setDisplayBack(true)} onMouseOut={() => setDisplayBack(false)}>
+        <Card.Wrapper data-aos='zoom-in-down' onMouseOver={() => setDisplayBack(true)} onMouseOut={() => setDisplayBack(false)}>
             <Card.Inner rotate={+displayBack}>
                 <Card.Front>
                     <img src={character.image} alt={character.name} />
