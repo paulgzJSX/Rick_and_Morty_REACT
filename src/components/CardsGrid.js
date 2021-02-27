@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import { useSelector } from 'react-redux'
 import { useInfiniteScroll } from '../hooks/useInfiniteScroll'
-import { CharacterCard, Spinner } from './index' 
+import { CharacterCard, Spinner } from './index'
 import { Cards } from '../styles/Card.elements'
 
 const CardsGrid = () => {
@@ -10,7 +10,7 @@ const CardsGrid = () => {
     const { characters } = useSelector(state => state.charactersReducer)
     const { isLoading } = useSelector(state => state.loaderReducer)
     const { error } = useSelector(state => state.errorReducer)
-    
+
     useInfiniteScroll(bottomBoundaryRef)
 
     return (
