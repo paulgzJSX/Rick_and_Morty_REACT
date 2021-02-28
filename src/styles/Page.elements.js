@@ -56,10 +56,11 @@ export const BackButton = styled(Link)`
     color: #fff;
     padding: .7rem 2rem;
     transition: .6s ease-in-out;
-    animation: 2s ${changeOut} ease-in-out infinite;
+    transform: scale(1);
 
     &:hover {
         background-color: red;
+        transform: scale(1.2);
     }
 
     span {
