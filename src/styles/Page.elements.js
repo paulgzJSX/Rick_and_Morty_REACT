@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components'
-import { flexCenter } from '../styles/GlobalStyles'
+import { flexCenter } from './GlobalStyles'
 import { Link } from 'react-router-dom'
 import { ImSwitch } from 'react-icons/im'
 
@@ -73,7 +73,6 @@ export const BackButton = styled(Link)`
     background-color: brown;
     color: #fff;
     padding: .7rem 2rem;
-    transform: scale(1);
     transition: .6s ease-in-out;
     animation: 2s ${changeOut} ease-in-out infinite;
 

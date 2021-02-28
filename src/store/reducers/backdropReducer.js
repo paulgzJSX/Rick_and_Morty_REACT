@@ -1,3 +1,5 @@
+import { DISPLAY_BACKDROP, HIDE_BACKDROP } from '../actions/actionContants'
+
 const initialState = {
     display: false,
     child: null
@@ -5,13 +7,13 @@ const initialState = {
 
 export const backdropReducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'DISPLAY_BACKDROP':
+        case DISPLAY_BACKDROP:
             return {
                 display: true,
                 child: action.child
             }
         
-        case 'HIDE_BACKDROP':
+        case HIDE_BACKDROP:
             return {
                 display: false,
                 child: null

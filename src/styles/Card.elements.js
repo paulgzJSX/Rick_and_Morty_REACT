@@ -79,7 +79,7 @@ export const CharacterStatus = styled.div`
     width: 100%;
     color: #fff;
     text-align: right;
-    padding: .5rem;  
+    padding: .5rem; 
 `
 
 export const Back = styled.div`
@@ -87,7 +87,7 @@ export const Back = styled.div`
     flex-direction: column;
     background-color: #333;
     color: white;
-    padding: 20px;
+    padding: 1.1rem 1.1rem 2rem;
     transform: rotateY(180deg);  
     ${Backface} 
 
@@ -98,12 +98,12 @@ export const Back = styled.div`
 
 `
 
-export const Content = styled.div`
-`
+export const Content = styled.div``
 
 export const Buttons = styled.div`
     width: 100%;
     ${flexSpaceBetween};
+    padding: 0 1rem;
 
     button {
         width: 5rem;
@@ -122,7 +122,6 @@ export const Buttons = styled.div`
             transform: scale(1.2);
         }
     }
-
 `
 
 export const AliveIcon = styled(GoPrimitiveDot)`

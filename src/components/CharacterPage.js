@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import * as Page from '../styles/CharacterPage.elements'
-import { SwitchIcon } from '../styles/CharacterPage.elements'
+import * as Page from '../styles/Page.elements'
+import { SwitchIcon } from '../styles/Page.elements'
 
 const CharacterPage = () => {
     let { id } = useParams()

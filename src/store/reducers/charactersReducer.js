@@ -1,11 +1,12 @@
+import { FETCH_CHARACTERS } from '../actions/actionContants'
+
 const initialState = {
     characters: []
 }
 
 export const charactersReducer = (state = initialState, action) => {
-    console.log(state);
     switch (action.type) {
-        case 'FETCH_CHARACTERS':
+        case FETCH_CHARACTERS:
             return {
                 ...state,
                 characters: [...state.characters, ...action.results]
