@@ -1,30 +1,12 @@
 import styled, { keyframes } from 'styled-components'
-import { flexCenter } from './GlobalStyles'
+import { flexCenter, scaleIn } from './GlobalStyles'
 import { Link } from 'react-router-dom'
 import { ImSwitch } from 'react-icons/im'
 
-const scaleIn = keyframes`
-    0% {
-        transform: scale(.7);
-    }
-    50% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(.7);
-    }
-`
-
 const changeOut = keyframes`
-    0% {
-        transform: rotate(-10deg);
-    }
-    50% {
-        transform: rotate(10deg);
-    }
-    100% {
-        transform: rotate(-10deg);
-    }
+    0% { transform: rotate(-10deg) }
+    50% { transform: rotate(10deg) }
+    100% { transform: rotate(-10deg) }
 `
 
 export const Wrapper = styled.div``

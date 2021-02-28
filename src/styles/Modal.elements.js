@@ -1,11 +1,5 @@
 import styled, { keyframes } from 'styled-components'
-import { flexCenter, widthHeight100 } from './GlobalStyles'
-
-const scaleIn = keyframes`
-    0% { transform: scale(.7) }
-    50% { transform: scale(1) }
-    100% { transform: scale(.7) }
-`
+import { flexCenter, widthHeight100, scaleIn } from './GlobalStyles'
 
 const moveIn = keyframes`
     0% { transform: translateX(-20%) }
@@ -34,7 +28,6 @@ export const Image = styled.div`
     width: 30%;
     padding: 1rem;
 
-
     img {
         ${widthHeight100};
         border-radius: 1.2rem;
@@ -54,6 +47,7 @@ export const Content = styled.div`
     h1 {
         margin-bottom: 1rem;
         animation: 1.8s ${moveIn} ease-in-out infinite;
+        font-size: clamp(1.5rem, 3vw, 2rem);
     }
 
     ul {

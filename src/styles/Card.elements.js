@@ -10,15 +10,9 @@ const Backface = css`
 `
 
 const tremble = keyframes`
-    0% {
-        transform: translateX(-3%);
-    }
-    50% {
-        transform: translateX(3%);
-    }
-    100% {
-        transform: translateX(-3%);
-    }
+    0% { transform: translateX(-3%) }
+    50% { transform: translateX(3%) }
+    100% { transform: translateX(-3%) }
 `
 
 export const Cards = styled.section`
@@ -95,7 +89,6 @@ export const Back = styled.div`
         list-style: none;
         padding-bottom: 10px;        
     }
-
 `
 
 export const Content = styled.div``

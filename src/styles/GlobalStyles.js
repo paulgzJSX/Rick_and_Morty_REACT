@@ -1,5 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
-import { css } from 'styled-components'
+import { createGlobalStyle, css, keyframes } from 'styled-components'
 
 export const GlobalStyles = createGlobalStyle`
     * {
@@ -41,4 +40,16 @@ export const flexSpaceBetween = css`
 export const widthHeight100 = css`
     width: 100%;
     height: 100%;
+`
+
+export const scaleIn = keyframes`
+    0% {
+        transform: scale(.7);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(.7);
+    }
 `
